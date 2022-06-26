@@ -6,7 +6,6 @@ function product() {
     const router = useRouter();
     const [product, useProduct] = useState();
     const proudctId = router.query.productId;
-    console.log(product)
     useEffect(() => {
         axios.get(`https://dummyjson.com/products/${proudctId}`)
             .then(response => useProduct(response.data))

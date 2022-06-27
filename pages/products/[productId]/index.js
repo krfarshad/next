@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import SingleContent from '../../../components/products/single-page/SingleContent';
+import SingleProduct from '../../../components/products/single-page/SingleProduct';
 function product() {
     const router = useRouter();
     const [product, useProduct] = useState();
@@ -12,7 +12,7 @@ function product() {
     }, [proudctId]);
     return (
         <>
-        {product ?  <SingleContent info={product} /> : <p className='mx-auto my-8 font-bold '>loading</p> }
+        {product ?  <SingleProduct info={product} /> : <p className='mx-auto my-8 font-bold flex items-center justify-center'>loading</p> }
         </>
     )
 }
